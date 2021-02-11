@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 html {
   box-sizing: border-box;
@@ -10,7 +10,7 @@ body {
   overflow-y: hidden;
   display: flex;
   align-items: center;
-
+  font-family: Nunito, sans-serif;
 }
 
 /* Video Background */
@@ -45,11 +45,11 @@ video {
   color: black;
   margin: 0 auto;
   padding: 25px 50px;
-  border-radius: 5px;
+  border-radius: 20px;
   z-index: 2;
   display: flex;
   justify-content: center;
-
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .input-container {
@@ -82,7 +82,7 @@ input {
   border-radius: 20px;
   background: #fff;
   outline: none;
-
+  font-family: Nunito, sans-serif;
 }
 
 /* Button */
@@ -99,7 +99,9 @@ button {
   outline: none;
 }
 
-
+button:hover {
+  background: #18b19a;
+}
 
 /* Countdown */
 ul {
@@ -107,7 +109,7 @@ ul {
 }
 
 li {
-
+  display: inline-block;
   font-size: 30px;
   list-style-type: none;
   padding: 10px;
@@ -126,6 +128,33 @@ li span {
   top: 60px;
 }
 
+.complete-title {
+  animation: complete 4s infinite;
+}
+
+@keyframes complete {
+  0% {
+    color: rgb(161, 93, 93);
+  }
+
+  25% {
+    color: rgb(228, 224, 30);
+  }
+
+  50% {
+    color: rgb(73, 214, 38);
+    transform: scale(1.5);
+  }
+
+  75% {
+    color: rgb(33, 76, 219);
+  }
+
+  100% {
+    color: rgb(230, 39, 220);
+  }
+}
+
 
 /* Media Query: Large Smartphone (Vertical) */
 @media screen and (max-width: 600px) {
@@ -141,8 +170,8 @@ li span {
   }
 
   .container {
-
-    min-height: 245px;
+    min-height: unset;
+    width: 95vw;
     padding: 20px;
     margin: 10px;
   }
